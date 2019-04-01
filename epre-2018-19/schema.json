@@ -59,7 +59,18 @@
             "type": "string",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": true,
+                "enum": [
+                    "Eastern Cape",
+                    "Free State",
+                    "Gauteng",
+                    "KwaZulu-Natal",
+                    "Limpopo",
+                    "Mpumalanga",
+                    "Northern Cape",
+                    "North West",
+                    "Western Cape"
+                ]
             }
         },
         {
