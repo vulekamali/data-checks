@@ -5,7 +5,7 @@ from pprint import pformat
 
 def run_checks(filepath):
     print("===== Checking {} =====".format(filepath))
-    report = validate(filepath)
+    report = validate(filepath, row_limit=10**12)
     log_report(report)
     return report['error-count'] + len(report['warnings'])
 
