@@ -50,9 +50,10 @@ for dirpath, dirnames, filenames in os.walk("."):
             dataset_count += 1
 
 print("\nFound and checked {} datasets.".format(dataset_count))
-if dataset_count:
-    if errors_or_warnings:
-        print("ERRORS OR WARNINGS EXIST: see above")
-        exit(1)
-    else:
+
+if errors_or_warnings:
+    print("ERRORS OR WARNINGS EXIST: see above")
+    exit(1)
+else:
+    if dataset_count:
         print("All datasets are ok")
