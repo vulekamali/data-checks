@@ -51,7 +51,7 @@
             "type": "year",
             "format": "default",
             "constaints": {
-              "required": true
+                "required": true
             }
         },
         {
@@ -89,5 +89,16 @@
     ],
     "missingValues": [
         ""
+    ],
+    "primaryKey": [
+        "budget_phase",
+        "department",
+        "economic_classification_2",
+        "economic_classification_3",
+        "economic_classification_4",
+        "financial_year",
+        "government",
+        "programme",
+        "programme_number"
     ]
 }
