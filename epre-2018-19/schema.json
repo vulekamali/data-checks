@@ -1,0 +1,57 @@
+{
+    "fields": [
+        {
+            "name": "budget_phase",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "department",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "economic_classification_2",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "economic_classification_3",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "economic_classification_4",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "financial_year",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "government",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "programme",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "programme_number",
+            "type": "integer",
+            "format": "default"
+        },
+        {
+            "name": "value",
+            "type": "integer",
+            "format": "default"
+        }
+    ],
+    "missingValues": [
+        ""
+    ]
+}
