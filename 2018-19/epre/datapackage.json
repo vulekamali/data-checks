@@ -10,7 +10,7 @@
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "schema.json"
+            "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/organise-better/schema/epre.json"
         }
     ]
 }

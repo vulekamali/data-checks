@@ -9,7 +9,8 @@
                     "Audited Outcome",
                     "Adjusted appropriation",
                     "Main appropriation",
-                    "Medium Term Estimates"
+                    "Medium Term Estimates",
+                    "Revised estimate",
                 ],
                 "required": true
             }
