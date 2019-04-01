@@ -5,7 +5,7 @@ from pprint import pformat
 
 def run_checks(filepath):
     print("===== Checking {} =====".format(filepath))
-    report = validate(filepath)
+    report = validate(filepath, row_limit=10**12)
     log_report(report)
     return report['error-count'] + len(report['warnings'])
 
@@ -40,9 +40,10 @@ def log_report(report):
             print(message)
 
 
+errors_or_warnings = 0
+dataset_count = 0
+
 for dirpath, dirnames, filenames in os.walk("."):
-    errors_or_warnings = 0
-    dataset_count = 0
     for filename in filenames:
         if filename == "datapackage.json":
             filepath = os.path.join(dirpath, filename)
@@ -50,9 +51,10 @@ for dirpath, dirnames, filenames in os.walk("."):
             dataset_count += 1
 
 print("\nFound and checked {} datasets.".format(dataset_count))
-if dataset_count:
-    if errors_or_warnings:
-        print("ERRORS OR WARNINGS EXIST: see above")
-        exit(1)
-    else:
+
+if errors_or_warnings:
+    print("ERRORS OR WARNINGS EXIST: see above")
+    exit(1)
+else:
+    if dataset_count:
         print("All datasets are ok")

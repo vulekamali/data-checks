@@ -9,7 +9,8 @@
                     "Audited Outcome",
                     "Adjusted appropriation",
                     "Main appropriation",
-                    "Medium Term Estimates"
+                    "Medium Term Estimates",
+                    "Revised estimate"
                 ],
                 "required": true
             }
@@ -91,7 +92,7 @@
         },
         {
             "name": "value",
-            "type": "integer",
+            "type": "number",
             "format": "default",
             "constraints": {
                 "required": true
