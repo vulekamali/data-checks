@@ -14,6 +14,15 @@ Each dataset should be in a directory specific to the type of data release (e.g.
 `datapackage.json` files are automatically discovered and checked against the schema they refer to when changes are uploaded to [this repository on GitHub.com](https://github.com/vulekamali/data-checks) in a [Pull Request](https://help.github.com/en/articles/about-pull-requests)
 
 
+Data owners adding new datasets to be checked
+---------------------------------------------
+
+1. Create a folder for the dataset in the appropriate financial year with the right name for the type of release (see above)
+2. Upload the dataset somewhere where you can get a URL that will be available consistently, e.g. the Treasury website
+3. Copy an existing Datapackage.json into your dataset's folder
+4. Update the URL to your dataset's public URL and any references to other financial years to the correct one
+
+
 Developer setup:
 ----------------
 
