@@ -3,52 +3,88 @@
         {
             "name": "budget_phase",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "enum": [
+                    "Audited Outcome",
+                    "Adjusted appropriation",
+                    "Main appropriation",
+                    "Medium Term Estimates"
+                ],
+                "required": true
+            }
         },
         {
             "name": "department",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "economic_classification_2",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "economic_classification_3",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "economic_classification_4",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "financial_year",
-            "type": "integer",
-            "format": "default"
+            "type": "year",
+            "format": "default",
+            "constaints": {
+              "required": true
+            }
         },
         {
             "name": "government",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "programme",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "programme_number",
             "type": "integer",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
         },
         {
             "name": "value",
             "type": "integer",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
         }
     ],
     "missingValues": [
