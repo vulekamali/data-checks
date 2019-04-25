@@ -1,11 +1,30 @@
 import os
 from goodtables import validate
 from pprint import pformat
+import data_checks.checks.epre
 
 
 def run_checks(filepath):
     print("===== Checking {} =====".format(filepath))
-    report = validate(filepath, row_limit=10**12)
+
+    # Get the dataset's type and year
+    path, filename = os.path.split(filepath)
+    path, dataset_type = os.path.split(path)
+    path, dataset_year = os.path.split(path)
+
+    checks = ['structure', 'schema']
+
+    # Get the custom checks for the dataset type
+    try:
+        data_checks = __import__(f'data_checks.checks.{dataset_type}')
+        checks += getattr(data_checks.checks, dataset_type).checks
+    except ModuleNotFoundError:
+        pass
+    except AttributeError:
+        pass
+
+    # Run the validation checks
+    report = validate(filepath, checks=checks, row_limit=10**12)
     log_report(report)
     return report['error-count'] + len(report['warnings'])
 
