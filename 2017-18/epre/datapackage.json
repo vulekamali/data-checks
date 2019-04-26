@@ -4,7 +4,7 @@
     "profile": "tabular-data-package",
     "resources": [
         {
-            "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/treasury-auto-checked/estimates-of-provincial-expenditure-south-africa-2017-18.csv",
+            "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/treasury-auto-checked/estimates-of-provincial-expenditure-south-africa-2017-18-consistent-column-names.csv",
             "profile": "tabular-data-resource",
             "name": "epre-2017-18",
             "format": "csv",

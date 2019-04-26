@@ -1,7 +1,7 @@
 {
     "fields": [
         {
-            "name": "budget_phase",
+            "name": "BudgetPhase",
             "type": "string",
             "format": "default",
             "constraints": {
@@ -16,7 +16,7 @@
             }
         },
         {
-            "name": "department",
+            "name": "Department",
             "type": "string",
             "format": "default",
             "constraints": {
@@ -24,7 +24,7 @@
             }
         },
         {
-            "name": "economic_classification_2",
+            "name": "EconomicClassification1",
             "type": "string",
             "format": "default",
             "constraints": {
@@ -32,7 +32,7 @@
             }
         },
         {
-            "name": "economic_classification_3",
+            "name": "EconomicClassification2",
             "type": "string",
             "format": "default",
             "constraints": {
@@ -40,7 +40,7 @@
             }
         },
         {
-            "name": "economic_classification_4",
+            "name": "EconomicClassification3",
             "type": "string",
             "format": "default",
             "constraints": {
@@ -48,7 +48,7 @@
             }
         },
         {
-            "name": "financial_year",
+            "name": "FinancialYear",
             "type": "year",
             "format": "default",
             "constaints": {
@@ -56,7 +56,7 @@
             }
         },
         {
-            "name": "government",
+            "name": "Government",
             "type": "string",
             "format": "default",
             "constraints": {
@@ -75,7 +75,7 @@
             }
         },
         {
-            "name": "programme",
+            "name": "Programme",
             "type": "string",
             "format": "default",
             "constraints": {
@@ -83,7 +83,7 @@
             }
         },
         {
-            "name": "programme_number",
+            "name": "ProgNumber",
             "type": "integer",
             "format": "default",
             "constraints": {
@@ -91,7 +91,7 @@
             }
         },
         {
-            "name": "value",
+            "name": "Value",
             "type": "number",
             "format": "default",
             "constraints": {
@@ -103,14 +103,14 @@
         ""
     ],
     "primaryKey": [
-        "budget_phase",
-        "department",
-        "economic_classification_2",
-        "economic_classification_3",
-        "economic_classification_4",
-        "financial_year",
-        "government",
-        "programme",
-        "programme_number"
+        "Government",
+        "Department",
+        "ProgNumber",
+        "Programme",
+        "EconomicClassification1",
+        "EconomicClassification2",
+        "EconomicClassification3",
+        "FinancialYear",
+        "BudgetPhase"
     ]
 }
