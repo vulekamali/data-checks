@@ -8,7 +8,11 @@ from data_checks.check_datapackage import run_checks
 
 def run_report(filepath):
     print("===== Checking {} =====".format(filepath))
+<<<<<<< HEAD
     report = run_checks(filepath)
+=======
+    report = validate(filepath, row_limit=10**12, order_fields=True, error_limit=100)
+>>>>>>> WIP using order_fields option
     log_report(report)
     return report['error-count'] + len(report['warnings'])
 
