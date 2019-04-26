@@ -4,7 +4,7 @@ from goodtables import validate, check, Error, registry
 @check('budget-phase-required-values', type='custom', context='body')
 class BudgetPhaseRequiredValues(object):
     """
-    Check class that there is at least one row where Budget Phase has
+    Check that there is at least one row where Budget Phase has
     each of the following values:
         - 'Audited Outcome',
         - 'Adjusted appropriation',

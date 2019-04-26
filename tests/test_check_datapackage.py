@@ -1,6 +1,5 @@
 import unittest
-from goodtables import validate, check, Error
-import goodtables.cells
+
 from data_checks.check_datapackage import run_checks
 
 
@@ -11,7 +10,8 @@ class TestCheckDatapackage(unittest.TestCase):
     def test_perfect_datapackage(self):
         file_path = 'tests/datapackages/2018-19/epre/perfect_datapackage.json'
         report = run_checks(file_path)
-        self.assertEqual(report['error-count'], 0, f'Report should not contain any errors for {file_path} datapackage')
+        self.assertEqual(
+            report['error-count'], 0, f'Report should not contain any errors for {file_path} datapackage')
 
     def test_missing_required_values_datapackage(self):
         file_path = 'tests/datapackages/2018-19/epre/missing_required_values_datapackage.json'

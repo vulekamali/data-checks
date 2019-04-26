@@ -5,6 +5,10 @@ from goodtables import validate
 
 
 def run_checks(filepath):
+    """
+    Find the custom checks for the datapackage at filepath and
+    run both the custom checks and the default checks on the datapackage.
+    """
     # Get the dataset's type and year
     path, filename = os.path.split(filepath)
     path, dataset_type = os.path.split(path)

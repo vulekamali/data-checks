@@ -1,6 +1,8 @@
 import unittest
-from goodtables import validate, check, Error
+
+from goodtables import cells, checks, validate, Error
 import goodtables.cells
+
 from data_checks.checks.epre.budget_phase_required_values \
     import BudgetPhaseRequiredValues
 
