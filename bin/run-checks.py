@@ -63,7 +63,7 @@ def log_report(report):
 errors_or_warnings = 0
 dataset_count = 0
 
-for dirpath, dirnames, filenames in os.walk("."):
+for dirpath, dirnames, filenames in os.walk("./datapackages"):
     for filename in filenames:
         if filename == "datapackage.json":
             filepath = os.path.join(dirpath, filename)
