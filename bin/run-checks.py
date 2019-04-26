@@ -2,6 +2,7 @@ import os
 from goodtables import validate
 from pprint import pformat
 import data_checks.checks.epre
+from importlib import import_module
 
 
 def run_checks(filepath):
@@ -16,8 +17,8 @@ def run_checks(filepath):
 
     # Get the custom checks for the dataset type
     try:
-        data_checks = __import__(f'data_checks.checks.{dataset_type}')
-        checks += getattr(data_checks.checks, dataset_type).checks
+        checks += import_module(f'.checks.{dataset_type}',
+                                'data_checks').checks
     except ModuleNotFoundError:
         pass
     except AttributeError:
