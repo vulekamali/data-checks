@@ -22,6 +22,10 @@ class BudgetPhaseRequiredValues(object):
         ])
 
     def check_row(self, cells):
+        """
+        Get the row's budget_phase values and remove them from the required values
+        that still need to be found.
+        """
         errors = []
 
         budget_phase_values = list(filter(
@@ -34,6 +38,10 @@ class BudgetPhaseRequiredValues(object):
         return errors
 
     def check_table(self):
+        """
+        After all the rows have been checked, check if there are any required values
+        left to be found and return an error for each of the values still to be found.
+        """
         errors = []
 
         for required_value in self.__required_values:
