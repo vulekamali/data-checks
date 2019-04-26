@@ -31,7 +31,7 @@ class BudgetPhaseRequiredValues(object):
         errors = []
 
         budget_phase_values = list(filter(
-            lambda cell: cell.get('field') == 'budget_phase', cells))
+            lambda cell: cell.get('header') == 'budget_phase', cells))
 
         # Eliminate budget_values that were found
         for budget_phase_value in budget_phase_values:
@@ -48,7 +48,7 @@ class BudgetPhaseRequiredValues(object):
 
         for required_value in self.__required_values_left:
             error = Error('budget-phase-required-values',
-                          message=f'Table does not contain the "{required_value}"' \
+                          message=f'Table does not contain the "{required_value}" ' \
                           'value in the budget_phase column at least once')
             errors.append(error)
 
