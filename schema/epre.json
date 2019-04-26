@@ -16,6 +16,11 @@
             }
         },
         {
+            "name": "VoteNumber",
+            "type": "integer",
+            "format": "default"
+        },
+        {
             "name": "Department",
             "type": "string",
             "format": "default",
@@ -46,6 +51,26 @@
             "constraints": {
                 "required": true
             }
+        },
+        {
+            "name": "EconomicClassification4",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "EconomicClassification5",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "FunctionGroup1",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "FunctionGroup2",
+            "type": "string",
+            "format": "default"
         },
         {
             "name": "FinancialYear",
@@ -91,6 +116,16 @@
             }
         },
         {
+            "name": "Subprogramme",
+            "type": "string",
+            "format": "default"
+        },
+        {
+            "name": "SubprogNumber",
+            "type": "integer",
+            "format": "default"
+        },
+        {
             "name": "Value",
             "type": "number",
             "format": "default",
@@ -107,9 +142,15 @@
         "Department",
         "ProgNumber",
         "Programme",
+        "SubprogNumber",
+        "Subprogramme",
         "EconomicClassification1",
         "EconomicClassification2",
         "EconomicClassification3",
+        "EconomicClassification4",
+        "EconomicClassification5",
+        "FunctionGroup1",
+        "FunctionGroup2",
         "FinancialYear",
         "BudgetPhase"
     ]
