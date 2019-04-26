@@ -13,13 +13,15 @@ class BudgetPhaseRequiredValues(object):
         - 'Medium Term Estimates'.
     """
 
+    required_values = [
+        'Audited Outcome',
+        'Adjusted appropriation',
+        'Main appropriation',
+        'Medium Term Estimates',
+    ]
+
     def __init__(self, **options):
-        self.__required_values = set([
-            'Audited Outcome',
-            'Adjusted appropriation',
-            'Main appropriation',
-            'Medium Term Estimates',
-        ])
+        self.__required_values_left = set(self.required_values)
 
     def check_row(self, cells):
         """
@@ -33,7 +35,7 @@ class BudgetPhaseRequiredValues(object):
 
         # Eliminate budget_values that were found
         for budget_phase_value in budget_phase_values:
-            self.__required_values.discard(budget_phase_value.get('value'))
+            self.__required_values_left.discard(budget_phase_value.get('value'))
 
         return errors
 
@@ -44,7 +46,7 @@ class BudgetPhaseRequiredValues(object):
         """
         errors = []
 
-        for required_value in self.__required_values:
+        for required_value in self.__required_values_left:
             error = Error('budget-phase-required-values',
                           message=f'Table does not contain the "{required_value}"' \
                           'value in the budget_phase column at least once')
