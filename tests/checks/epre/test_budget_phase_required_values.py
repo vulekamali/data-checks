@@ -24,8 +24,8 @@ class TestBudgetPhaseRequiredValues(unittest.TestCase):
         errors = self.check.check_row(cells)
         errors += self.check.check_table()
 
-        self.assertEqual(len(errors), 0, """No errors should be returned for cells
-                         that contain each of the required budget_phase values""")
+        self.assertEqual(len(errors), 0, ('No errors should be returned for cells '
+                         'that contain each of the required budget_phase values'))
 
     def test_contains_duplicates_of_each_required_value(self):
         cells = [
@@ -36,9 +36,9 @@ class TestBudgetPhaseRequiredValues(unittest.TestCase):
         errors = self.check.check_row(cells)
         errors += self.check.check_table()
 
-        self.assertEqual(len(errors), 0, """No errors should be returned
-                         for cells that contain each of the required
-                         budget_phase values""")
+        self.assertEqual(len(errors), 0, ('No errors should be returned '
+                         'for cells that contain each of the required '
+                         'budget_phase values'))
 
     def test_contains_some_required_values(self):
         required_values_present = 2
@@ -53,8 +53,8 @@ class TestBudgetPhaseRequiredValues(unittest.TestCase):
 
         self.assertEqual(len(errors),
                          len(self.required_values) - required_values_present,
-                         """No errors should be returned for cells that
-                         contain each of the required budget_phase values""")
+                         ('No errors should be returned for cells that '
+                         'contain each of the required budget_phase values'))
 
     def test_contains_no_required_values(self):
         cells = [
@@ -66,9 +66,9 @@ class TestBudgetPhaseRequiredValues(unittest.TestCase):
         errors += self.check.check_table()
 
         self.assertEqual(len(errors), len(self.required_values),
-                         """One error for each of the required
-                         values should be returned if the dataset
-                         contains none of the required values.""")
+                         ('One error for each of the required '
+                         'values should be returned if the dataset '
+                         'contains none of the required values.'))
 
 
 if __name__ == '__main__':

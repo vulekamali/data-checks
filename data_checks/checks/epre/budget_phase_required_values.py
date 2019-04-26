@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from goodtables import validate, check, Error, registry
 
 

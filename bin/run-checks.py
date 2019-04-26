@@ -1,34 +1,15 @@
 import os
-from goodtables import validate
+
 from pprint import pformat
-import data_checks.checks.epre
-from importlib import import_module
+
+from data_checks.check_datapackage import run_checks
 
 
-def run_checks(filepath):
+def run_report(filepath):
     print("===== Checking {} =====".format(filepath))
-
-    # Get the dataset's type and year
-    path, filename = os.path.split(filepath)
-    path, dataset_type = os.path.split(path)
-    path, dataset_year = os.path.split(path)
-
-    checks = ['structure', 'schema']
-
-    # Get the custom checks for the dataset type
-    try:
-        checks += import_module(f'.checks.{dataset_type}',
-                                'data_checks').checks
-    except ModuleNotFoundError:
-        pass
-    except AttributeError:
-        pass
-
-    # Run the validation checks
-    report = validate(filepath, checks=checks, row_limit=10**12)
+    report = run_checks(filepath)
     log_report(report)
     return report['error-count'] + len(report['warnings'])
-
 
 def log_report(report):
     # Borrowed from goodtables.cli
@@ -59,7 +40,6 @@ def log_report(report):
             message = template.format(**substitutions)
             print(message)
 
-
 errors_or_warnings = 0
 dataset_count = 0
 
@@ -67,7 +47,7 @@ for dirpath, dirnames, filenames in os.walk("./datapackages"):
     for filename in filenames:
         if filename == "datapackage.json":
             filepath = os.path.join(dirpath, filename)
-            errors_or_warnings += run_checks(filepath)
+            errors_or_warnings += run_report(filepath)
             dataset_count += 1
 
 print("\nFound and checked {} datasets.".format(dataset_count))
