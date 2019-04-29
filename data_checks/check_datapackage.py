@@ -1,7 +1,6 @@
-from importlib import import_module
-import os
-
 from goodtables import validate
+
+from .checks.get_checks_for_dataset import get_checks_for_dataset
 
 
 def run_checks(filepath):
@@ -9,21 +8,9 @@ def run_checks(filepath):
     Find the custom checks for the datapackage at filepath and
     run both the custom checks and the default checks on the datapackage.
     """
-    # Get the dataset's type and year
-    path, filename = os.path.split(filepath)
-    path, dataset_type = os.path.split(path)
-    path, dataset_year = os.path.split(path)
-
     checks = ['structure', 'schema']
 
-    # Get the custom checks for the dataset type
-    try:
-        checks += import_module(f'.checks.{dataset_type}',
-                                'data_checks').checks
-    except ModuleNotFoundError:
-        pass
-    except AttributeError:
-        pass
+    checks += get_checks_for_dataset(filepath)
 
     # Run the validation checks
     report = validate(filepath, checks=checks, row_limit=10**12)

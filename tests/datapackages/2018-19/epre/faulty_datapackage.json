@@ -4,7 +4,7 @@
     "profile": "tabular-data-package",
     "resources": [
         {
-            "path": "missing-required-values-estimates-of-provincial-expenditure-south-africa-2018-20.csv",
+            "path": "faulty-estimates-of-provincial-expenditure-south-africa-2018-19.csv",
             "profile": "tabular-data-resource",
             "name": "testdata-2018-19",
             "format": "csv",

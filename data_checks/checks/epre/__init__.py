@@ -1,4 +1,2 @@
 from .budget_phase_required_values import BudgetPhaseRequiredValues
-
-
-checks = ['budget-phase-required-values']
+from .budget_phase_for_new_financial_year import BudgetPhaseForNewFinancialYear
