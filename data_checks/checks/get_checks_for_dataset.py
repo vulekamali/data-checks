@@ -21,6 +21,7 @@ def get_checks_for_epre_dataset(filepath, dataset_type, dataset_year):
     return [
         'budget-phase-required-values',
         {'budget-phase-for-new-financial-year': {'new_year': first_year}},
+        'department-names-required-characters'
     ]
 
 

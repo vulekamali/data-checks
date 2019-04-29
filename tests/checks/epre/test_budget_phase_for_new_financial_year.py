@@ -39,6 +39,9 @@ class TestBudgetPhaseForNewFinancialYear(unittest.TestCase):
 
         self.assertEqual(len(errors), 1, ('An error should be returned when '
                                           'an unexpected budget phase was given'))
+        self.assertEqual(errors[0].code, 'budget-phase-for-new-financial-year')
+        self.assertEqual(errors[0].row_number, 1)
+        self.assertIsNotNone(errors[0].message)
 
     def test_no_expected_budget_phase(self):
         new_year = 2018
