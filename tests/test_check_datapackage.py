@@ -13,6 +13,12 @@ class TestCheckDatapackage(unittest.TestCase):
         self.assertEqual(
             report['error-count'], 0, f'Report should not contain any errors for {file_path} datapackage')
 
+    def test_datapackage_reordered_headers(self):
+        file_path = 'tests/datapackages/2018-19/epre/reordered_headers_datapackage.json'
+        report = run_checks(file_path)
+        self.assertEqual(
+            report['error-count'], 0, f'Report should not contain any errors for {file_path} datapackage')
+
     def test_missing_faulty_datapackage(self):
         file_path = 'tests/datapackages/2018-19/epre/faulty_datapackage.json'
         report = run_checks(file_path)

@@ -13,5 +13,5 @@ def run_checks(filepath):
     checks += get_checks_for_dataset(filepath)
 
     # Run the validation checks
-    report = validate(filepath, checks=checks, row_limit=10**12)
+    report = validate(filepath, checks=checks, row_limit=10**12, order_fields=True)
     return report

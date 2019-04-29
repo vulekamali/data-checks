@@ -1,0 +1,16 @@
+{
+    "name": "testdata-2018-19",
+    "schema": "tabular-data-package",
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "reordered-headers-estimates-of-provincial-expenditure-south-africa-2018-20.csv",
+            "profile": "tabular-data-resource",
+            "name": "testdata-2018-19",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": "epre.json"
+        }
+    ]
+}
