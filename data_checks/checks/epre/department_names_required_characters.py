@@ -19,21 +19,25 @@ class DepartmentNamesRequiredCharacters(object):
         [A-Z] and [a-z] characters.
         """
 
-        def is_new_financial_year_value(cell):
-            return cell.get("header") == "department" and cell.get(
-                "value") == self.new_year
-
         def is_department_without_a_z_and_A_Z(cell):
+            """
+            Check if a cell has the department header and doesn't contain
+            both lowercase and uppercase letters.
+            """
             return cell.get("header") == "department" and not (
                 any(c in cell.get("value") for c in string.ascii_lowercase) and
                 any(c in cell.get("value") for c in string.ascii_uppercase)
             )
 
-        departments = list(
-            filter(is_department_without_a_z_and_A_Z, cells))
+        # Filter the department names for those without both lowercase and
+        # uppercase letters.
+        departments = list(filter(is_department_without_a_z_and_A_Z, cells))
 
         errors = [Error(code='department-names-required-characters',
-                        message=f'Value "{cell.get("value")}" in column department must contain [A-Z] and [a-z] (capitalised and non-capitalised) characters on row {cell.get("row-number")}',
+                        message=(f'Value "{cell.get("value")}" in column '
+                                 'department must contain [A-Z] and [a-z] '
+                                 '(capitalised and non-capitalised) characters '
+                                 f'on row {cell.get("row-number")}'),
                         cell=cell,
                         ) for cell in departments]
 

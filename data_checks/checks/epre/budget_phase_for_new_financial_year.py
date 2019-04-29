@@ -40,12 +40,18 @@ class BudgetPhaseForNewFinancialYear(object):
         # then there must be one budget_phase value which is the expected
         # budget phase
         if new_year_values and not budget_phase_values:
-            error = Error('budget-phase-for-new-financial-year',
-                          message=f'Value "{new_year_values[0].get("value")}" in column budget_phase must be '
-                          f' must be "{self.expected_budget_phase}" when column budget_year '
-                          f'is "{self.new_year}" on row {new_year_values[0].get("row-number")}',
-                          row_number=new_year_values[0].get("row-number"),
-                          )
+            error = Error(
+                'budget-phase-for-new-financial-year',
+                message=(
+                    f'Value "{new_year_values[0].get("value")}" '
+                    'in column budget_phase must be '
+                    f' must be "{self.expected_budget_phase}" when '
+                    'column budget_year '
+                    f'is "{self.new_year}" on row '
+                    f'{new_year_values[0].get("row-number")}'
+                ),
+                row_number=new_year_values[0].get("row-number"),
+            )
             errors.append(error)
 
         return errors

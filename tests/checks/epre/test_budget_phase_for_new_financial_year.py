@@ -14,15 +14,17 @@ class TestBudgetPhaseForNewFinancialYear(unittest.TestCase):
         check = BudgetPhaseForNewFinancialYear(new_year, expected_budget_phase)
         cells = [
             goodtables.cells.create_cell(
-                'budget_phase', expected_budget_phase, 'budget_phase', row_number=1),
+                'budget_phase', expected_budget_phase,
+                'budget_phase', row_number=1),
             goodtables.cells.create_cell(
                 'financial_year', new_year, 'financial_year', row_number=1),
         ]
 
         errors = check.check_row(cells)
 
-        self.assertEqual(len(errors), 0, ('No errors should be returned when '
-                                          'the expected budget phase was given'))
+        self.assertEqual(len(errors), 0,
+                         ('No errors should be returned when '
+                          'the expected budget phase was given'))
 
     def test_incorrect_expected_budget_phase(self):
         new_year = 2018
@@ -30,15 +32,17 @@ class TestBudgetPhaseForNewFinancialYear(unittest.TestCase):
         check = BudgetPhaseForNewFinancialYear(new_year, expected_budget_phase)
         cells = [
             goodtables.cells.create_cell(
-                'budget_phase', 'Not an expected budget phase', 'budget_phase', row_number=1),
+                'budget_phase', 'Not an expected budget phase',
+                'budget_phase', row_number=1),
             goodtables.cells.create_cell(
                 'financial_year', new_year, 'financial_year', row_number=1),
         ]
 
         errors = check.check_row(cells)
 
-        self.assertEqual(len(errors), 1, ('An error should be returned when '
-                                          'an unexpected budget phase was given'))
+        self.assertEqual(len(errors), 1,
+                         ('An error should be returned when '
+                          'an unexpected budget phase was given'))
         self.assertEqual(errors[0].code, 'budget-phase-for-new-financial-year')
         self.assertEqual(errors[0].row_number, 1)
         self.assertIsNotNone(errors[0].message)
@@ -63,7 +67,8 @@ class TestBudgetPhaseForNewFinancialYear(unittest.TestCase):
         check = BudgetPhaseForNewFinancialYear(new_year, expected_budget_phase)
         cells = [
             goodtables.cells.create_cell(
-                'budget_phase', 'Not an expected budget phase', 'budget_phase', row_number=1),
+                'budget_phase', 'Not an expected budget phase',
+                'budget_phase', row_number=1),
             goodtables.cells.create_cell(
                 'financial_year', new_year + 1, 'financial_year', row_number=1),
         ]
