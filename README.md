@@ -52,7 +52,8 @@ Running locally:
 
 ```bash
 pip install -e .
-python bin/run-checks.py
+python bin/run-checks.py # Looks for datapackage.json files in the datapackages directory
+python bin/run-checks.py <directory-path> # Looks for datapackage.json files in directory-path
 ```
 
 Running the tests:

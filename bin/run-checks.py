@@ -1,4 +1,5 @@
 import os
+import sys
 
 from pprint import pformat
 
@@ -43,7 +44,9 @@ def log_report(report):
 errors_or_warnings = 0
 dataset_count = 0
 
-for dirpath, dirnames, filenames in os.walk("./datapackages"):
+datapackage_dir = sys.argv[1] if len(sys.argv) > 1 else  "./datapackages"
+
+for dirpath, dirnames, filenames in os.walk(datapackage_dir):
     for filename in filenames:
         if filename == "datapackage.json":
             filepath = os.path.join(dirpath, filename)

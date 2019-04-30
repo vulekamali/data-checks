@@ -8,21 +8,21 @@ class TestCheckDatapackage(unittest.TestCase):
         pass
 
     def test_perfect_datapackage(self):
-        file_path = 'tests/datapackages/2018-19/epre/perfect_datapackage.json'
+        file_path = 'tests/epre_perfect_datapackage/2018-19/epre/datapackage.json'
         report = run_checks(file_path)
         self.assertEqual(
             report['error-count'], 0,
             f'Report should not contain any errors for {file_path} datapackage')
 
     def test_datapackage_reordered_headers(self):
-        file_path = 'tests/datapackages/2018-19/epre/reordered_headers_datapackage.json'
+        file_path = 'tests/epre_reordered_headers_datapackage/2018-19/epre/datapackage.json'
         report = run_checks(file_path)
         self.assertEqual(
             report['error-count'], 0,
             f'Report should not contain any errors for {file_path} datapackage')
 
     def test_missing_faulty_datapackage(self):
-        file_path = 'tests/datapackages/2018-19/epre/faulty_datapackage.json'
+        file_path = 'tests/epre_faulty_datapackage/2018-19/epre/datapackage.json'
         report = run_checks(file_path)
         error_codes = [error['code']
                        for error in report['tables'][0]['errors']]
