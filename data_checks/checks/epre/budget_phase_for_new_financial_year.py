@@ -11,9 +11,12 @@ class BudgetPhaseForNewFinancialYear(object):
     """
 
     def __init__(self, new_year, expected_budget_phase="Main appropriation",
-                 **options):
+                 budget_phase_column="BudgetPhase",
+                 financial_year_column="FinancialYear", **options):
         self.new_year = new_year
         self.expected_budget_phase = expected_budget_phase
+        self.__budget_phase_column = budget_phase_column
+        self.__financial_year_column = financial_year_column
 
     def check_row(self, cells):
         """
@@ -22,22 +25,21 @@ class BudgetPhaseForNewFinancialYear(object):
         """
 
         def is_new_financial_year_value(cell):
-            return cell.get("header") == "financial_year" and cell.get(
-                "value") == self.new_year
+            return (cell.get("header") == self.__financial_year_column and
+                    cell.get("value") == self.new_year)
 
         def is_budget_phase_value(cell):
-            return cell.get("header") == "budget_phase"
+            return cell.get("header") == self.__budget_phase_column
 
         def is_expected_budget_phase_value(cell):
-            return is_budget_phase_value(cell) and cell.get(
-                "value") == self.expected_budget_phase
+            return (is_budget_phase_value(cell) and
+            cell.get("value") == self.expected_budget_phase)
 
         errors = []
 
         new_year_values = list(filter(is_new_financial_year_value, cells))
 
-        budget_phase_values = list(
-            filter(is_budget_phase_value, cells))
+        budget_phase_values = list(filter(is_budget_phase_value, cells))
 
         expected_budget_phase_values = list(
             filter(is_expected_budget_phase_value, budget_phase_values))
@@ -49,7 +51,7 @@ class BudgetPhaseForNewFinancialYear(object):
             if budget_phase_values:
                 message = (
                     f'Value "{budget_phase_values[0].get("value")}" '
-                    'in column budget_phase must be '
+                    f'in column {self.__budget_phase_column} must be '
                     f'"{self.expected_budget_phase}" when '
                     'column budget_year '
                     f'is "{self.new_year}" on row '
@@ -58,7 +60,7 @@ class BudgetPhaseForNewFinancialYear(object):
             else:
                 message = (
                     f'Empty value '
-                    'in column budget_phase must be '
+                    f'in column {self.__budget_phase_column} must be '
                     f'"{self.expected_budget_phase}" when '
                     'column budget_year '
                     f'is "{self.new_year}" on row '

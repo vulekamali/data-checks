@@ -10,8 +10,8 @@ class DepartmentNamesRequiredCharacters(object):
     (capitalised and non-capitalised).
     """
 
-    def __init__(self, **options):
-        pass
+    def __init__(self, department_column="Department", **options):
+        self.__department_column = department_column
 
     def check_row(self, cells):
         """
@@ -24,7 +24,7 @@ class DepartmentNamesRequiredCharacters(object):
             Check if a cell has the department header and doesn't contain
             both lowercase and uppercase letters.
             """
-            return cell.get("header") == "department" and not (
+            return cell.get("header") == self.__department_column and not (
                 any(c in cell.get("value") for c in string.ascii_lowercase) and
                 any(c in cell.get("value") for c in string.ascii_uppercase)
             )
@@ -35,7 +35,7 @@ class DepartmentNamesRequiredCharacters(object):
 
         errors = [Error(code='department-names-required-characters',
                         message=(f'Value "{cell.get("value")}" in column '
-                                 'department must contain [A-Z] and [a-z] '
+                                 f'{self.__department_column} must contain [A-Z] and [a-z] '
                                  '(capitalised and non-capitalised) characters '
                                  f'on row {cell.get("row-number")}'),
                         cell=cell,

@@ -3,12 +3,14 @@ import unittest
 from goodtables import cells, checks, validate, Error
 import goodtables.cells
 
-from data_checks.checks.epre.department_names_required_characters import DepartmentNamesRequiredCharacters
+from data_checks.checks.epre.department_names_required_characters import \
+    DepartmentNamesRequiredCharacters
 
 
 class TestDepartmentNamesRequiredCharacters(unittest.TestCase):
     def setUp(self):
-        self.check = DepartmentNamesRequiredCharacters()
+        self.check = DepartmentNamesRequiredCharacters(
+            department_column="department")
 
     def test_contains_only_lowercase_characters(self):
         cells = [
