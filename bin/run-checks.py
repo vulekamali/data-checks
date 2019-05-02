@@ -1,14 +1,16 @@
 import os
-from goodtables import validate
+import sys
+
 from pprint import pformat
 
+from data_checks.check_datapackage import run_checks
 
-def run_checks(filepath):
+
+def run_report(filepath):
     print("===== Checking {} =====".format(filepath))
-    report = validate(filepath, row_limit=10**12)
+    report = run_checks(filepath)
     log_report(report)
     return report['error-count'] + len(report['warnings'])
-
 
 def log_report(report):
     # Borrowed from goodtables.cli
@@ -39,15 +41,16 @@ def log_report(report):
             message = template.format(**substitutions)
             print(message)
 
-
 errors_or_warnings = 0
 dataset_count = 0
 
-for dirpath, dirnames, filenames in os.walk("."):
+datapackage_dir = sys.argv[1] if len(sys.argv) > 1 else  "./datapackages"
+
+for dirpath, dirnames, filenames in os.walk(datapackage_dir):
     for filename in filenames:
         if filename == "datapackage.json":
             filepath = os.path.join(dirpath, filename)
-            errors_or_warnings += run_checks(filepath)
+            errors_or_warnings += run_report(filepath)
             dataset_count += 1
 
 print("\nFound and checked {} datasets.".format(dataset_count))
