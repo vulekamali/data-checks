@@ -48,7 +48,7 @@ class BudgetPhaseRequiredValues(object):
         """
         errors = []
 
-        for required_value in self.__required_values_left:
+        for required_value in sorted(self.__required_values_left):
             error = Error('budget-phase-required-values',
                           message=('Table does not contain the '
                                    f' "{required_value}" value in the '
