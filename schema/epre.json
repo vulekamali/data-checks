@@ -159,20 +159,14 @@
         ""
     ],
     "primaryKey": [
-        "Government",
+        "BudgetPhase",
         "Department",
-        "ProgNumber",
-        "Programme",
-        "SubprogNumber",
-        "Subprogramme",
         "EconomicClassification1",
         "EconomicClassification2",
         "EconomicClassification3",
-        "EconomicClassification4",
-        "EconomicClassification5",
-        "FunctionGroup1",
-        "FunctionGroup2",
         "FinancialYear",
-        "BudgetPhase"
+        "Government",
+        "Programme",
+        "ProgNumber"
     ]
 }
