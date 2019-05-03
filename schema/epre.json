@@ -18,7 +18,10 @@
         {
             "name": "VoteNumber",
             "type": "integer",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": false
+            }
         },
         {
             "name": "Department",
@@ -55,22 +58,34 @@
         {
             "name": "EconomicClassification4",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": false
+            }
         },
         {
             "name": "EconomicClassification5",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": false
+            }
         },
         {
             "name": "FunctionGroup1",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": false
+            }
         },
         {
             "name": "FunctionGroup2",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": false
+            }
         },
         {
             "name": "FinancialYear",
@@ -118,12 +133,18 @@
         {
             "name": "Subprogramme",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": false
+            }
         },
         {
             "name": "SubprogNumber",
             "type": "integer",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+                "required": false
+            }
         },
         {
             "name": "Value",
