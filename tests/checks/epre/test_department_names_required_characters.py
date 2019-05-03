@@ -12,7 +12,7 @@ from ..helpers import BaseCheckTestCase
 class TestDepartmentNamesRequiredCharacters(BaseCheckTestCase):
     def setUp(self):
         super().setUp()
-        self.check = DepartmentNamesRequiredCharacters(department_column="department")
+        self.check = DepartmentNamesRequiredCharacters(column_header="department")
 
     def test_contains_only_lowercase_characters(self):
         cells = [
@@ -32,7 +32,7 @@ class TestDepartmentNamesRequiredCharacters(BaseCheckTestCase):
                 "column-number": None,
                 "message": 'Value "only lowercase" in column department must contain [A-Z] '
                 "and [a-z] (capitalised and non-capitalised) characters on row 1",
-                "message-data": {},
+                "message-data": {"header": "department", "value": "only lowercase"},
             },
             {
                 "code": "department-names-required-characters",
@@ -40,7 +40,7 @@ class TestDepartmentNamesRequiredCharacters(BaseCheckTestCase):
                 "column-number": None,
                 "message": 'Value "only lowercase" in column department must contain [A-Z] '
                 "and [a-z] (capitalised and non-capitalised) characters on row 2",
-                "message-data": {},
+                "message-data": {"header": "department", "value": "only lowercase"},
             },
         ]
         self.assertCheckErrors(expected_errors, errors)
@@ -61,7 +61,7 @@ class TestDepartmentNamesRequiredCharacters(BaseCheckTestCase):
                 "column-number": None,
                 "message": 'Value "ONLY UPPERCASE" in column department must contain [A-Z] '
                 "and [a-z] (capitalised and non-capitalised) characters on row 4",
-                "message-data": {},
+                "message-data": {"header": "department", "value": "ONLY UPPERCASE"},
             }
         ]
         self.assertCheckErrors(expected_errors, errors)
@@ -81,7 +81,7 @@ class TestDepartmentNamesRequiredCharacters(BaseCheckTestCase):
                 "column-number": None,
                 "message": 'Value "12345!@)#(*" in column department must contain [A-Z] and '
                 "[a-z] (capitalised and non-capitalised) characters on row 4",
-                "message-data": {},
+                "message-data": {"header": "department", "value": "12345!@)#(*"},
             }
         ]
         self.assertCheckErrors(expected_errors, errors)

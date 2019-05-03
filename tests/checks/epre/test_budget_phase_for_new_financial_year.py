@@ -54,10 +54,16 @@ class TestBudgetPhaseForNewFinancialYear(BaseCheckTestCase):
                 "row-number": 1,
                 "column-number": None,
                 "message": (
-                    'Value "Not an expected budget phase" in column budget_phase must '
+                    '"Not an expected budget phase" in column budget_phase must '
                     'be "Main Appropriation" when column financial_year is "2018" on row 1'
                 ),
-                "message-data": {},
+                "message-data": {
+                    "actual_budget_phase": "Not an expected budget phase",
+                    "budget_phase_column": "budget_phase",
+                    "expected_budget_phase": "Main Appropriation",
+                    "financial_year_column": "financial_year",
+                    "new_year": 2018,
+                },
             }
         ]
         self.assertCheckErrors(expected_errors, errors)
@@ -77,7 +83,13 @@ class TestBudgetPhaseForNewFinancialYear(BaseCheckTestCase):
                 "column-number": None,
                 "message": 'Empty value in column budget_phase must be "Main Appropriation" '
                 'when column financial_year is "2018" on row 1',
-                "message-data": {},
+                "message-data": {
+                    "actual_budget_phase": "Empty value",
+                    "budget_phase_column": "budget_phase",
+                    "expected_budget_phase": "Main Appropriation",
+                    "financial_year_column": "financial_year",
+                    "new_year": 2018,
+                },
             }
         ]
         self.assertCheckErrors(expected_errors, errors)

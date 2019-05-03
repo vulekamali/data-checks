@@ -18,7 +18,7 @@ class TestBudgetPhaseRequiredValues(BaseCheckTestCase):
             "Main appropriation",
             "Medium Term Estimates",
         ]
-        self.check = BudgetPhaseRequiredValues(budget_phase_column="budget_phase")
+        self.check = BudgetPhaseRequiredValues(column_header="budget_phase")
 
     def test_contains_one_of_each_required_value(self):
         cells = [
@@ -53,12 +53,12 @@ class TestBudgetPhaseRequiredValues(BaseCheckTestCase):
                 "row-number": None,
                 "column-number": None,
                 "message": (
-                    f'Table does not contain the  "{value}" value'
+                    f'Table does not contain the "{value}" value'
                     " in the budget_phase column at least once"
                 ),
-                "message-data": {},
+                "message-data": {"header": "budget_phase", "missing_value": value},
             }
-            for value in sorted(self.required_values[required_values_present:])
+            for value in self.required_values[required_values_present:]
         ]
         self.assertCheckErrors(expected_errors, errors)
 
@@ -76,12 +76,12 @@ class TestBudgetPhaseRequiredValues(BaseCheckTestCase):
                 "row-number": None,
                 "column-number": None,
                 "message": (
-                    f'Table does not contain the  "{value}" value'
+                    f'Table does not contain the "{value}" value'
                     " in the budget_phase column at least once"
                 ),
-                "message-data": {},
+                "message-data": {"header": "budget_phase", "missing_value": value},
             }
-            for value in sorted(self.required_values)
+            for value in self.required_values
         ]
         self.assertCheckErrors(expected_errors, errors)
 
