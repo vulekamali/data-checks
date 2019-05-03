@@ -53,7 +53,7 @@ class BudgetPhaseForNewFinancialYear(object):
                     f'Value "{budget_phase_values[0].get("value")}" '
                     f'in column {self.__budget_phase_column} must be '
                     f'"{self.expected_budget_phase}" when '
-                    'column budget_year '
+                    f'column {self.__financial_year_column} '
                     f'is "{self.new_year}" on row '
                     f'{new_year_values[0].get("row-number")}'
                 )
@@ -62,7 +62,7 @@ class BudgetPhaseForNewFinancialYear(object):
                     f'Empty value '
                     f'in column {self.__budget_phase_column} must be '
                     f'"{self.expected_budget_phase}" when '
-                    'column budget_year '
+                    f'column {self.__financial_year_column} '
                     f'is "{self.new_year}" on row '
                     f'{new_year_values[0].get("row-number")}'
                 )
