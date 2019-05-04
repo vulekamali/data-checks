@@ -1,6 +1,10 @@
-budget_phase,value,department,economic_classification_2,economic_classification_3,economic_classification_4,financial_year,government,programme_number,programme
-Audited Outcome,165211000.0,Cooperative Governance And Traditional Affairs,Current Payments,Compensation Of Employees,Salaries And Wages,2019,Eastern Cape,1,Administration
-Adjusted appropriation,141351530.3,Cooperative Governance And Traditional Affairs,Current Payments,Compensation Of Employees,Salaries And Wages,2017,Eastern Cape,1,Administration
-Main appropriation,149449499.0,Cooperative Governance And Traditional Affairs,Current Payments,Compensation Of Employees,Salaries And Wages,2017,Eastern Cape,1,Administration
-Revised estimate,140532500.0,Cooperative Governance And Traditional Affairs,Current Payments,Compensation Of Employees,Salaries And Wages,2017,Eastern Cape,1,Administration
-Medium Term Estimates,165211000.0,Cooperative Governance And Traditional Affairs,Current Payments,Compensation Of Employees,Salaries And Wages,2019,Eastern Cape,1,Administration
+BudgetPhase,Department,EconomicClassification1,EconomicClassification3,Government,Programme,FinancialYear,ProgNumber,Value,EconomicClassification4,EconomicClassification5,FunctionGroup1,FunctionGroup2,Subprogramme,SubprogNumber,VoteNumber,EconomicClassification2
+Audited Outcome,Cooperative Governance And Traditional Affairs,Current Payments,Salaries And Wages,Eastern Cape,Administration,2014,1,121283000,,,,,,,,Compensation Of Employees
+Audited Outcome,Cooperative Governance And Traditional Affairs,Current Payments,Salaries And Wages,Eastern Cape,Administration,2015,1,119490000,,,,,,,,Compensation Of Employees
+Audited Outcome,Cooperative Governance And Traditional Affairs,Current Payments,Salaries And Wages,Eastern Cape,Administration,2016,1,118677900,,,,,,,,Compensation Of Employees
+Adjusted appropriation,Cooperative Governance And Traditional Affairs,Current Payments,Salaries And Wages,Eastern Cape,Administration,2017,1,141351530.3,,,,,,,,Compensation Of Employees
+Main appropriation,Cooperative Governance And Traditional Affairs,Current Payments,Salaries And Wages,Eastern Cape,Administration,2017,1,149449499,,,,,,,,Compensation Of Employees
+Revised estimate,Cooperative Governance And Traditional Affairs,Current Payments,Salaries And Wages,Eastern Cape,Administration,2017,1,140532500,,,,,,,,Compensation Of Employees
+Main appropriation,Cooperative Governance And Traditional Affairs,Current Payments,Salaries And Wages,Eastern Cape,Administration,2018,1,145942706.2,,,,,,,,Compensation Of Employees
+Medium Term Estimates,Cooperative Governance And Traditional Affairs,Current Payments,Salaries And Wages,Eastern Cape,Administration,2019,1,165211000,,,,,,,,Compensation Of Employees
+Medium Term Estimates,Cooperative Governance And Traditional Affairs,Current Payments,Salaries And Wages,Eastern Cape,Administration,2020,1,174298000,,,,,,,,Compensation Of Employees

@@ -15,7 +15,8 @@ class TestBudgetPhaseRequiredValues(unittest.TestCase):
             'Main appropriation',
             'Medium Term Estimates',
         ]
-        self.check = BudgetPhaseRequiredValues()
+        self.check = BudgetPhaseRequiredValues(
+            budget_phase_column="budget_phase")
 
     def test_contains_one_of_each_required_value(self):
         cells = [
