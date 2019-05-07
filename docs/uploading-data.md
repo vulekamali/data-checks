@@ -1,7 +1,7 @@
 Data owners adding new datasets to be checked
 ---------------------------------------------
 1. Log in or [sign up](https://github.com/join?source=header-home) for [github.com](https://github.com/)
-2. Make sure you data is available on a publicly accessible url in "raw" format, such as s3 or a github gist.
+2. Make sure your data is available on a publicly accessible url in "raw" format, such as s3 or a github [gist](https://gist.github.com/).
 3. Go to https://github.com/vulekamali/data-checks
 4. Click on "Create new file"
 
@@ -15,33 +15,43 @@ Data owners adding new datasets to be checked
 
    ```
    {
-    "name": "<INSERT NAME OF YOUR DATASET>",
+    "name": "<INSERT NAME OF YOUR DATA SET>",
     "schema": "tabular-data-package",
     "profile": "tabular-data-package",
     "resources": [
         {
-            "path": "<INSERT URL TO YOUR DATASET>",
+            "path": "<INSERT URL TO YOUR DATA SET>",
             "profile": "tabular-data-resource",
-            "name": "<INSERT NAME OF YOUR DATASET>",
+            "name": "<INSERT NAME OF YOUR DATA SET>",
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/master/schema/<INSERT TYPE OF YOUR DATASET>.json"
+            "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/master/schema/<INSERT TYPE OF YOUR DATA SET>.json"
         }
     ]
    }
    ```
 
-7. Update the `name` value and the `path`, `name` and `schema` values inside the `resources` values in your file.
+7. Update the `name` value and the `path`, `name` and `schema` values inside the `resources` value in your new file.
 
    ![Filled file values](https://github.com/vulekamali/data-checks/raw/delena-how-to-upload/docs/images/file-values.png "Filled file values")
 
-8. Under the "Commit new file" heading, select the "Create a new branch for this commit and start a pull request." option and click on "Propose new file".
+8. Scroll down to the "Commit new file" heading. Select the "Create a new branch for this commit and start a pull request." option and click on "Propose new file".
 
    ![Select "Create a new branch..."](https://github.com/vulekamali/data-checks/raw/delena-how-to-upload/docs/images/commit-new-file.png "Select 'Create a new branch...'")
 
 9. On the next screen, give your pull request a descriptive title such as "Add 2019-20 EPRE data" and click on "Create pull request"
 
-   ![Click 'Create pull request'](https://github.com/vulekamali/data-checks/raw/delena-how-to-upload/docs/images/checks-havent-completed.png "Click 'Create pull request'")
+   ![Click 'Create pull request'](https://github.com/vulekamali/data-checks/raw/delena-how-to-upload/docs/images/pull-request.png "Click 'Create pull request'")
 
-10. You should now see a section that says "Some checks haven’t completed yet". Wait until the text turns red or green.
+10. You should now see a section with yellow text that reads: "Some checks haven’t completed yet". Wait until the text turns either red or green.
+
+   ![Some checks haven't completed yet](https://github.com/vulekamali/data-checks/raw/delena-how-to-upload/docs/images/checks-havent-completed.png "Some checks haven't completed yet")
+
+  - If you see a section with green text reading "All checks have passed", your data set has passed all of the checks **successfully**:
+
+     ![All checks have passed](https://github.com/vulekamali/data-checks/raw/delena-how-to-upload/docs/images/success.png "All checks have passed")
+
+  - If you see a section with red text reading "All checks have failed", your data set has not passed all of the checks:
+
+     ![All checks have failed](https://github.com/vulekamali/data-checks/raw/delena-how-to-upload/docs/images/failure.png "All checks have failed")
