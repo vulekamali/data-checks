@@ -52,6 +52,10 @@ Data owners adding new datasets to be checked
 
      ![All checks have passed](https://github.com/vulekamali/data-checks/raw/delena-how-to-upload/docs/images/success.png "All checks have passed")
 
-  - If you see a section with red text reading "All checks have failed", your data set has not passed all of the checks:
+  - If you see a section with red text reading "All checks have failed", your data set did not pass all of the checks:
 
      ![All checks have failed](https://github.com/vulekamali/data-checks/raw/delena-how-to-upload/docs/images/failure.png "All checks have failed")
+
+11. If your data set did not pass all of the checks, you can click on "details" on the first item under "All checks have failed". On the next screen, scroll down to the bottom of the screen. You should see a list of error messages generated for your data set.
+
+     ![Error messages](https://github.com/vulekamali/data-checks/raw/delena-how-to-upload/docs/images/errors.png "Error messages")
