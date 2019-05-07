@@ -4,7 +4,7 @@
  "profile": "tabular-data-package",
  "resources": [
      {
-         "path": "https://gist.githubusercontent.com/delenamalan/5faa14c601fce43af4824a406ca1cc59/raw/de884c58816c484e430c4c9d6c4f6ee57384d1e5/perfect_data.csv",
+         "path": "https://gist.githubusercontent.com/delenamalan/5faa14c601fce43af4824a406ca1cc59/raw/de884c58816c484e430c4c9d6c4f6ee57384d1e5/faulty_data.csv",
          "profile": "tabular-data-resource",
          "name": "2019-20-epre-provincial-dataset",
          "format": "csv",
