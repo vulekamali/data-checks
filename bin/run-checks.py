@@ -14,7 +14,7 @@ def run_report(filepath):
     except Exception as e:
         print("===== Goodtables checks resulted in an error =====")
         traceback.print_exc(file=sys.stdout)
-        if isinstance(e, KeyError):
+        if isinstance(e, KeyError) and str(e) == "'field'":
             print(
                 "\n===== It looks like the dataset might contain unexpected columns. ====="
             )
