@@ -4,7 +4,7 @@
     "profile": "tabular-data-package",
     "resources": [
         {
-            "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/treasury-auto-checked/PRV+EPRE+2019-20-from-jeffery-2019-05-20t0943.csv",
+            "path": "https://archive.org/download/PRVEPRE201920FromJeffery20190603t1412/PRV%20EPRE%202019-20-from-jeffery-2019-06-03t1412.csv",
             "profile": "tabular-data-resource",
             "name": "provincial-2019-20",
             "format": "csv",
