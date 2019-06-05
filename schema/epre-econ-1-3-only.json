@@ -1,8 +1,6 @@
 {
     "fields": [
         {
-            "columnType": "phase:id",
-            "conceptType": "phase",
             "name": "BudgetPhase",
             "type": "string",
             "format": "default",
@@ -18,18 +16,14 @@
             }
         },
         {
-            "columnType": "administrative-classification:generic:code",
-            "conceptType": "administrative-classification",
             "name": "VoteNumber",
             "type": "integer",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
-            "columnType": "administrative-classification:generic:label",
-            "conceptType": "administrative-classification",
             "name": "Department",
             "type": "string",
             "format": "default",
@@ -38,8 +32,6 @@
             }
         },
         {
-            "columnType": "economic-classification:generic:level1:code",
-            "conceptType": "economic-classification",
             "name": "EconomicClassification1",
             "type": "string",
             "format": "default",
@@ -48,8 +40,6 @@
             }
         },
         {
-            "columnType": "economic-classification:generic:level2:code",
-            "conceptType": "economic-classification",
             "name": "EconomicClassification2",
             "type": "string",
             "format": "default",
@@ -58,58 +48,46 @@
             }
         },
         {
-            "columnType": "economic-classification:generic:level3:code",
-            "conceptType": "economic-classification",
             "name": "EconomicClassification3",
             "type": "string",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
-            "columnType": "economic-classification:generic:level4:code",
-            "conceptType": "economic-classification",
             "name": "EconomicClassification4",
             "type": "string",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
-            "columnType": "economic-classification:generic:level5:code",
-            "conceptType": "economic-classification",
             "name": "EconomicClassification5",
             "type": "string",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
-            "columnType": "functional-classification:generic:level1:code",
-            "conceptType": "functional-classification",
             "name": "FunctionGroup1",
             "type": "string",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
-            "columnType": "functional-classification:generic:level2:code",
-            "conceptType": "functional-classification",
             "name": "FunctionGroup2",
             "type": "string",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
-            "columnType": "date:fiscal-year",
-            "conceptType": "date",
             "name": "FinancialYear",
             "type": "year",
             "format": "default",
@@ -118,8 +96,6 @@
             }
         },
         {
-            "columnType": "geo-source:target:code",
-            "conceptType": "geo-source",
             "name": "Government",
             "type": "string",
             "format": "default",
@@ -139,8 +115,6 @@
             }
         },
         {
-            "columnType": "activity:generic:program:label",
-            "conceptType": "activity",
             "name": "Programme",
             "type": "string",
             "format": "default",
@@ -149,8 +123,6 @@
             }
         },
         {
-            "columnType": "activity:generic:program:code",
-            "conceptType": "activity",
             "name": "ProgNumber",
             "type": "integer",
             "format": "default",
@@ -159,29 +131,22 @@
             }
         },
         {
-            "columnType": "activity:generic:subprogram:label",
-            "conceptType": "activity",
             "name": "Subprogramme",
             "type": "string",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
-            "columnType": "activity:generic:subprogram:code",
-            "conceptType": "activity",
             "name": "SubprogNumber",
             "type": "integer",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
-            "columnType": "value",
-            "conceptType": "value",
-            "decimalChar": ".",
             "name": "Value",
             "type": "number",
             "format": "default",
@@ -199,15 +164,9 @@
         "EconomicClassification1",
         "EconomicClassification2",
         "EconomicClassification3",
-        "EconomicClassification4",
-        "EconomicClassification5",
         "FinancialYear",
-        "FunctionGroup1",
-        "FunctionGroup2",
         "Government",
-        "ProgNumber",
         "Programme",
-        "SubprogNumber",
-        "Subprogramme"
+        "ProgNumber"
     ]
 }
