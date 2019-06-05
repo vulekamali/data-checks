@@ -7,8 +7,15 @@ class TestCheckDatapackage(unittest.TestCase):
     def setUp(self):
         pass
 
-    def test_perfect_datapackage(self):
+    def test_perfect_epre_datapackage_old_schema(self):
         file_path = 'tests/epre_perfect_datapackage/2018-19/epre/datapackage.json'
+        report = run_checks(file_path)
+        self.assertEqual(
+            report['error-count'], 0,
+            f'Report should not contain any errors for {file_path} datapackage')
+
+    def test_perfect_epre_datapackage(self):
+        file_path = 'tests/epre_perfect_datapackage/2019-20/epre/datapackage.json'
         report = run_checks(file_path)
         self.assertEqual(
             report['error-count'], 0,
