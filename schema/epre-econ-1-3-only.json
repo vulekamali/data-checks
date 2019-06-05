@@ -60,7 +60,7 @@
             "type": "string",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
@@ -68,7 +68,7 @@
             "type": "string",
             "format": "default",
             "constraints": {
-                "required": true
+                "required": false
             }
         },
         {
@@ -164,6 +164,10 @@
         "EconomicClassification1",
         "EconomicClassification2",
         "EconomicClassification3",
+        "EconomicClassification4",
+        "EconomicClassification5",
+        "FunctionGroup1",
+        "FunctionGroup2",
         "FinancialYear",
         "Government",
         "Programme",
