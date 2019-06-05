@@ -10,7 +10,7 @@
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/delenamalan-2019-20-provincial-data/schema/epre.json"
+            "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/master/schema/epre.json"
         }
     ]
 }
