@@ -1,0 +1,16 @@
+{
+    "name": "epre-2017-18",
+    "schema": "tabular-data-package",
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "https://archive.org/download/prvepre201920fromjeffery20190603t14122/PRV%20EPRE%202019-20-from-jeffery-2019-06-03t1412%20%282%29.csv",
+            "profile": "tabular-data-resource",
+            "name": "provincial-2017-18",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/master/schema/epre.json"
+        }
+    ]
+}
