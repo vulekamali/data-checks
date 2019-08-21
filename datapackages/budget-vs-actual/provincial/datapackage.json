@@ -10,7 +10,7 @@
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/master/schema/budget-vs-actual-provincial.json"
+            "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/budget-vs-actual/schema/budget-vs-actual-provincial.json"
         }
     ]
 }
