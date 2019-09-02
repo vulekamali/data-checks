@@ -1,0 +1,16 @@
+{
+    "name": "provincial-annual-report-2016-17",
+    "schema": "tabular-data-package",
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "are-2016-17-processed-2019-09-02t1844.csv",
+            "profile": "tabular-data-resource",
+            "name": "provincial-2018-19",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": "provincial-annual-report.json"
+        }
+    ]
+}
