@@ -1,12 +1,12 @@
 {
-    "name": "provincial-annual-report-2016-17",
+    "name": "provincial-annual-report-2015-16",
     "schema": "tabular-data-package",
     "profile": "tabular-data-package",
     "resources": [
         {
-            "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/are/are-2016-17-processed-2019-09-04.csv",
+            "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/are/are-2015-16-processed-2019-09-04.csv",
             "profile": "tabular-data-resource",
-            "name": "provincial-annual-report-expenditure-2016-17",
+            "name": "provincial-annual-report-expenditure-2015-16",
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
