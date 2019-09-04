@@ -4,7 +4,7 @@
     "profile": "tabular-data-package",
     "resources": [
         {
-            "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/are/are-2016-17-processed-2019-09-04.csv",
+            "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/are/are-2016-17-processed-2019-09-04t1604.csv",
             "profile": "tabular-data-resource",
             "name": "provincial-annual-report-expenditure-2016-17",
             "format": "csv",
