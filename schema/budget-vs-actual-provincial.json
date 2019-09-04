@@ -8,7 +8,7 @@
             "format": "default",
             "constraints": {
                 "enum": [
-                    "Audited Outcome",
+                    "Audit Outcome",
                     "Adjusted appropriation",
                     "Main appropriation",
                     "Medium Term Estimates",
