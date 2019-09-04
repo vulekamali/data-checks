@@ -12,7 +12,8 @@
                     "Adjusted appropriation",
                     "Main appropriation",
                     "Medium Term Estimates",
-                    "Revised estimate"
+                    "Revised estimate",
+                    "Final Appropriation"
                 ],
                 "required": true
             }
