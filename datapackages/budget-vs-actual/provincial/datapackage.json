@@ -4,7 +4,7 @@
     "profile": "tabular-data-package",
     "resources": [
         {
-            "path": "budget-vs-actual-provincial.csv",
+            "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/budget-vs-actual-provincial/budget-vs-actual-provincial-processed-2019-09-04t1927.csv",
             "profile": "tabular-data-resource",
             "name": "budget-vs-actual-provincial",
             "format": "csv",
