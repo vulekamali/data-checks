@@ -1,0 +1,192 @@
+{
+    "fields": [
+        {
+            "columnType": "phase:id",
+            "conceptType": "phase",
+            "name": "BudgetPhase",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "enum": [
+                    "Audited Outcome",
+                    "Adjusted appropriation",
+                    "Main appropriation",
+                    "Medium Term Estimates",
+                    "Revised estimate"
+                ],
+                "required": true
+            }
+        },
+        {
+            "columnType": "administrative-classification:generic:code",
+            "conceptType": "administrative-classification",
+            "name": "VoteNumber",
+            "type": "integer",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "administrative-classification:generic:label",
+            "conceptType": "administrative-classification",
+            "name": "Department",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "economic-classification:generic:level1:code",
+            "conceptType": "economic-classification",
+            "name": "EconomicClassification1",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "economic-classification:generic:level2:code",
+            "conceptType": "economic-classification",
+            "name": "EconomicClassification2",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "economic-classification:generic:level3:code",
+            "conceptType": "economic-classification",
+            "name": "EconomicClassification3",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "economic-classification:generic:level4:code",
+            "conceptType": "economic-classification",
+            "name": "EconomicClassification4",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "economic-classification:generic:level5:code",
+            "conceptType": "economic-classification",
+            "name": "EconomicClassification5",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "functional-classification:generic:level1:code",
+            "conceptType": "functional-classification",
+            "name": "FunctionGroup1",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "functional-classification:generic:level2:code",
+            "conceptType": "functional-classification",
+            "name": "FunctionGroup2",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "date:fiscal-year",
+            "conceptType": "date",
+            "name": "FinancialYear",
+            "type": "year",
+            "format": "default",
+            "constaints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "activity:generic:program:label",
+            "conceptType": "activity",
+            "name": "Programme",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "activity:generic:program:code",
+            "conceptType": "activity",
+            "name": "ProgNumber",
+            "type": "integer",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "activity:generic:subprogram:label",
+            "conceptType": "activity",
+            "name": "Subprogramme",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "activity:generic:subprogram:code",
+            "conceptType": "activity",
+            "name": "SubprogNumber",
+            "type": "integer",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "columnType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "name": "Value",
+            "type": "number",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        }
+    ],
+    "missingValues": [
+        ""
+    ],
+    "primaryKey": [
+        "BudgetPhase",
+        "Department",
+        "EconomicClassification1",
+        "EconomicClassification2",
+        "EconomicClassification3",
+        "EconomicClassification4",
+        "EconomicClassification5",
+        "FinancialYear",
+        "FunctionGroup1",
+        "FunctionGroup2",
+        "Government",
+        "ProgNumber",
+        "Programme",
+        "SubprogNumber",
+        "Subprogramme"
+    ]
+}

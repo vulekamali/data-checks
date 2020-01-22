@@ -1,0 +1,16 @@
+{
+    "name": "ene-2018-19",
+    "schema": "tabular-data-package",
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/ene/estimates-of-national-expenditure-south-africa-2018-19.csv",
+            "profile": "tabular-data-resource",
+            "name": "ene-2018-19",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/add-ene-schema/schema/ene.json"
+        }
+    ]
+}
