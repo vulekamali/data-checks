@@ -98,16 +98,6 @@
             }
         },
         {
-            "columnType": "functional-classification:generic:level2:code",
-            "conceptType": "functional-classification",
-            "name": "FunctionGroup2",
-            "type": "string",
-            "format": "default",
-            "constraints": {
-                "required": true
-            }
-        },
-        {
             "columnType": "date:fiscal-year",
             "conceptType": "date",
             "name": "FinancialYear",
@@ -182,8 +172,6 @@
         "EconomicClassification5",
         "FinancialYear",
         "FunctionGroup1",
-        "FunctionGroup2",
-        "Government",
         "ProgNumber",
         "Programme",
         "SubprogNumber",
