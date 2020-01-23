@@ -1,5 +1,8 @@
 import os
 
+# Importing it seems to have the side-effect of registering the checks?
+from . import epre
+
 
 def get_checks_for_dataset(filepath):
     """
