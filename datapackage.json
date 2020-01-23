@@ -1,0 +1,16 @@
+{
+ "name": "ene-2019-20",
+ "schema": "tabular-data-package",
+ "profile": "tabular-data-package",
+ "resources": [
+     {
+         "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/ene/NAT+ENE+2019-20+dataset.csv",
+         "profile": "tabular-data-resource",
+         "name": "ene-2019-20",
+         "format": "csv",
+         "mediatype": "text/csv",
+         "encoding": "utf-8",
+         "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/master/schema/ene.json"
+     }
+ ]
+}
