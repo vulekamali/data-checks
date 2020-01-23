@@ -12,12 +12,26 @@ def get_checks_for_dataset(filepath):
     dataset_type, dataset_year = get_dataset_info(filepath)
     if dataset_type == 'epre':
         checks += get_checks_for_epre_dataset(filepath, dataset_year)
+    if dataset_type == 'ene':
+        checks += get_checks_for_ene_dataset(filepath, dataset_year)
     return checks
 
 
 def get_checks_for_epre_dataset(filepath, dataset_year):
     """
     Get the custom checks for the an epre dataset with the given dataset_year.
+    """
+    first_year, _ = get_dataset_years(dataset_year)
+    return [
+        'budget-phase-required-values',
+        {'budget-phase-for-new-financial-year': {'new_year': first_year}},
+        'department-names-required-characters'
+    ]
+
+
+def get_checks_for_ene_dataset(filepath, dataset_year):
+    """
+    Get the custom checks for the an ene dataset with the given dataset_year.
     """
     first_year, _ = get_dataset_years(dataset_year)
     return [
