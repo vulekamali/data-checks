@@ -1,6 +1,6 @@
-from importlib import import_module
 import os
 
+# Importing it seems to have the side-effect of registering the checks?
 from . import epre
 
 
