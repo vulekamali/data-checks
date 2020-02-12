@@ -1,0 +1,16 @@
+{
+    "name": "budget-vs-actual-national",
+    "schema": "tabular-data-package",
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/budgeted-vs-actual-national/budget-vs-actual-national-2019-11-01t1315.csv",
+            "profile": "tabular-data-resource",
+            "name": "budget-vs-actual-national",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/budget-vs-actual/schema/budget-vs-actual-national.json"
+        }
+    ]
+}
