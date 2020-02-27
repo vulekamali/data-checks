@@ -4,7 +4,7 @@
  "profile": "tabular-data-package",
  "resources": [
      {
-         "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/ene/NAT+ENE+2019-20+dataset.csv",
+         "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/ene/NAT%2BENE%2B2019-20%2Bdataset_CSV3-libreoffice.csv",
          "profile": "tabular-data-resource",
          "name": "ene-2019-20",
          "format": "csv",
