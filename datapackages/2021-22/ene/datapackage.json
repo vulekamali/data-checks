@@ -1,16 +1,16 @@
-1 {
-2 "name": "ene-2021-22",
-3 "schema": "tabular-data-package",
-4 "profile": "tabular-data-package",
-5 "resources": [
-6 {
+ {
+ "name": "ene-2021-22",
+ "schema": "tabular-data-package",
+ "profile": "tabular-data-package",
+ "resources": [
+ {
 "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/ene/NAT+ENE+2021-22.xlsx",
-8 "profile": "tabular-data-resource",
-9 "name": "ene-2021-22",
-10 "format": "csv",
-11 "mediatype": "text/csv",
-12 "encoding": "utf-8",
-13 "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/master/schema/ene.json
-14 }
-15 ]
-16 }
+ "profile": "tabular-data-resource",
+ "name": "ene-2021-22",
+ "format": "csv",
+ "mediatype": "text/csv",
+ "encoding": "utf-8",
+ "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/master/schema/ene.json
+ }
+ ]
+ }
