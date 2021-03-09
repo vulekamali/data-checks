@@ -10,7 +10,7 @@
  "format": "csv",
  "mediatype": "text/csv",
  "encoding": "utf-8",
- "schema": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/epre.json"
+ "schema": ""https://raw.githubusercontent.com/vulekamali/data-checks/datapackages/datapackage.json"
  }
  ]
  }
