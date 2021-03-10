@@ -1,12 +1,12 @@
 {
- "name": "prv-epre-2020-21",
+ "name": "PRV-EPRE-2020-21",
  "schema": "tabular-data-package",
  "profile": "tabular-data-package",
  "resources": [
  {
-"path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/epre/prv-epre-2020-21.csv",
+"path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/epre/PRV-EPRE-2020-21.csv",
  "profile": "tabular-data-resource",
- "name": "prv-epre-2020-21",
+ "name": "PRV-EPRE-2020-21",
  "format": "csv",
  "mediatype": "text/csv",
  "encoding": "utf-8",
