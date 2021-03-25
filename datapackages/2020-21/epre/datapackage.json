@@ -4,13 +4,13 @@
  "profile": "tabular-data-package",
  "resources": [
  {
-"path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/epre/prv-epre-2020-21.csv",
- "profile": "tabular-data-resource",
- "name": "prv-epre-2020-21",
- "format": "csv",
- "mediatype": "text/csv",
- "encoding": "utf-8",
- "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/master/schema/epre.json"
+  "path": "https://s3-eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/epre/prv-epre-2020-21.csv",
+  "profile": "tabular-data-resource",
+  "name": "prv-epre-2020-21",
+  "format": "csv",
+  "mediatype": "text/csv",
+  "encoding": "utf-8",
+  "schema": "https://raw.githubusercontent.com/vulekamali/data-checks/master/schema/epre.json"
  }
  ]
  }
