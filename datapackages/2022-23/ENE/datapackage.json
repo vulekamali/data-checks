@@ -1,12 +1,12 @@
 {
- "name": "ENE 2022-23",
+ "name": "NAT-ENE-2022-23",
  "schema": "tabular-data-package",
  "profile": "tabular-data-package",
  "resources": [
      {
-         "path": "https://s3.eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/ene/NAT+ENE+2022-23.csv",
+         "path": "https://s3.eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/ene/NAT-ENE-2022-23.csv",
          "profile": "tabular-data-resource",
-         "name": "ENE 2022-23",
+         "name": "NAT-ENE-2022-23",
          "format": "csv",
          "mediatype": "text/csv",
          "encoding": "utf-8",
