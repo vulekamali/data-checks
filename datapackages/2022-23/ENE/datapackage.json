@@ -6,7 +6,7 @@
      {
          "path": "https://s3.eu-west-1.amazonaws.com/manual-uploads.vulekamali.gov.za/ene/NAT-ENE-2022-23.csv",
          "profile": "tabular-data-resource",
-         "name": "NAT-ENE-2022-23",
+         "name": "National-ENE-2022-23",
          "format": "csv",
          "mediatype": "text/csv",
          "encoding": "utf-8",
